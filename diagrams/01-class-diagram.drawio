@@ -1,0 +1,71 @@
+<mxfile host="app.diagrams.net" modified="2026-09-03T10:00:00.000Z" agent="Codex" version="24.7.17" type="device" compressed="false">
+  <diagram id="sunrise-class" name="Class Diagram">
+    <mxGraphModel dx="1600" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1600" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Sunrise Dental Clinic — Core Class Diagram" style="text;html=1;align=left;verticalAlign=middle;fontSize=23;fontStyle=1;fontColor=#0F3D56;" vertex="1" parent="1">
+          <mxGeometry x="90" y="32" width="800" height="42" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="user" value="&lt;b&gt;UserAccount&lt;/b&gt;&lt;hr/&gt;&lt;div align=&quot;left&quot;&gt;+ id&lt;br&gt;+ username&lt;br&gt;+ fullName&lt;br&gt;+ role&lt;br&gt;+ enabled&lt;/div&gt;" style="shape=umlClass;whiteSpace=wrap;html=1;rounded=0;shadow=1;fontSize=14;align=center;verticalAlign=top;spacingTop=8;fillColor=#E6F4F7;strokeColor=#0F6B7A;fontColor=#0A3341;" vertex="1" parent="1">
+          <mxGeometry x="110" y="105" width="280" height="212" as="geometry"/>
+        </mxCell>
+        <mxCell id="patient" value="&lt;b&gt;Patient&lt;/b&gt;&lt;hr/&gt;&lt;div align=&quot;left&quot;&gt;+ id&lt;br&gt;+ patientNumber&lt;br&gt;+ name&lt;br&gt;+ address&lt;br&gt;+ contactNumber&lt;/div&gt;" style="shape=umlClass;whiteSpace=wrap;html=1;rounded=0;shadow=1;fontSize=14;align=center;verticalAlign=top;spacingTop=8;fillColor=#F2F9EC;strokeColor=#5C8E39;fontColor=#294914;" vertex="1" parent="1">
+          <mxGeometry x="110" y="415" width="280" height="212" as="geometry"/>
+        </mxCell>
+        <mxCell id="appointment" value="&lt;b&gt;Appointment&lt;/b&gt;&lt;hr/&gt;&lt;div align=&quot;left&quot;&gt;+ id&lt;br&gt;+ appointmentNumber&lt;br&gt;+ scheduledAt&lt;br&gt;+ bookingMode&lt;br&gt;+ status&lt;br&gt;+ consultationFee&lt;/div&gt;" style="shape=umlClass;whiteSpace=wrap;html=1;rounded=0;shadow=1;fontSize=14;align=center;verticalAlign=top;spacingTop=8;fillColor=#FFF5E5;strokeColor=#C77D14;fontColor=#6B3E00;" vertex="1" parent="1">
+          <mxGeometry x="620" y="370" width="340" height="246" as="geometry"/>
+        </mxCell>
+        <mxCell id="treatment" value="&lt;b&gt;Treatment&lt;/b&gt;&lt;hr/&gt;&lt;div align=&quot;left&quot;&gt;+ id&lt;br&gt;+ code&lt;br&gt;+ name&lt;br&gt;+ cost&lt;br&gt;+ active&lt;/div&gt;" style="shape=umlClass;whiteSpace=wrap;html=1;rounded=0;shadow=1;fontSize=14;align=center;verticalAlign=top;spacingTop=8;fillColor=#F3EEFC;strokeColor=#7353B5;fontColor=#39216B;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="105" width="280" height="212" as="geometry"/>
+        </mxCell>
+        <mxCell id="invoice" value="&lt;b&gt;Invoice&lt;/b&gt;&lt;hr/&gt;&lt;div align=&quot;left&quot;&gt;+ id&lt;br&gt;+ billNumber&lt;br&gt;+ total&lt;br&gt;+ paymentStatus&lt;br&gt;+ paidAt&lt;/div&gt;" style="shape=umlClass;whiteSpace=wrap;html=1;rounded=0;shadow=1;fontSize=14;align=center;verticalAlign=top;spacingTop=8;fillColor=#FDEEF1;strokeColor=#B94C67;fontColor=#6B1D31;" vertex="1" parent="1">
+          <mxGeometry x="1170" y="520" width="280" height="212" as="geometry"/>
+        </mxCell>
+
+        <mxCell id="edge-patient-user" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#527E88;entryX=0.55;entryY=1;entryDx=0;entryDy=0;exitX=0.55;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="patient" target="user">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-patient-appointment" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#527E88;entryX=0;entryY=0.53;entryDx=0;entryDy=0;exitX=1;exitY=0.53;exitDx=0;exitDy=0;" edge="1" parent="1" source="patient" target="appointment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="edge-doctor-appointment" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#527E88;entryX=0.25;entryY=0;entryDx=0;entryDy=0;exitX=1;exitY=0.45;exitDx=0;exitDy=0;" edge="1" parent="1" source="user" target="appointment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="500" y="200"/>
+              <mxPoint x="705" y="200"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-treatment-appointment" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#527E88;entryX=0.85;entryY=0;entryDx=0;entryDy=0;exitX=0;exitY=0.52;exitDx=0;exitDy=0;" edge="1" parent="1" source="treatment" target="appointment">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="215"/>
+              <mxPoint x="910" y="215"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="edge-appointment-invoice" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;endArrow=open;endFill=0;strokeWidth=2;strokeColor=#527E88;entryX=0;entryY=0.35;entryDx=0;entryDy=0;exitX=1;exitY=0.72;exitDx=0;exitDy=0;" edge="1" parent="1" source="appointment" target="invoice">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1065" y="547"/>
+              <mxPoint x="1065" y="597"/>
+            </Array>
+          </mxGeometry>
+        </mxCell>
+
+        <mxCell id="m-user" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="330" y="327" width="48" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-patient-user" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="330" y="390" width="36" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-patient" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="400" y="503" width="30" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-appointment-patient" value="0..*" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="565" y="503" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-doctor" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="395" y="176" width="28" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-doctor-appt" value="0..*" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="675" y="335" width="46" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-treatment" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="1134" y="197" width="26" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-treatment-appt" value="0..*" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="882" y="338" width="48" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-invoice" value="0..1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="1112" y="584" width="48" height="22" as="geometry"/></mxCell>
+        <mxCell id="m-appointment-invoice" value="1" style="text;html=1;align=center;verticalAlign=middle;fontSize=13;fontStyle=1;fontColor=#36545C;" vertex="1" parent="1"><mxGeometry x="970" y="562" width="28" height="22" as="geometry"/></mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
